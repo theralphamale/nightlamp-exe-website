@@ -27,40 +27,63 @@ const links = [
   id="home"
   class="nightlamp-font relative min-h-screen overflow-hidden bg-[#050505] text-[#ffd800]"
 >
-  <!-- BINARY BACKGROUND -->
+  <!-- ANIMATED BINARY BACKGROUND -->
   <canvas
     id="binary-background"
     class="pointer-events-none absolute inset-0 z-0 h-full w-full"
     aria-hidden="true"
   ></canvas>
 
+  <!-- DARK OVERLAY -->
   <div
     class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[#050505]/20 via-[#050505]/55 to-[#050505]"
   ></div>
 
+  <!-- GRID -->
   <div
     class="background-grid pointer-events-none absolute inset-0 z-[2]"
   ></div>
 
   <!-- TOP BAR -->
   <div
-    class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-6 md:px-10"
+    class="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-6 pt-6 md:px-10"
   >
-    <div class="flex items-center gap-6">
-      <span
-        class="text-xs lowercase tracking-[0.2em] text-[#ffd800]"
+    <!-- LEFT -->
+    <span
+      class="text-xs lowercase tracking-[0.2em] text-[#ffd800]"
+    >
+      nightlampexecute.com
+    </span>
+
+    <!-- CENTRE NAV -->
+    <nav
+      class="flex items-center justify-center gap-3 whitespace-nowrap text-xs lowercase tracking-[0.2em] text-[#ffd800]"
+      aria-label="Main navigation"
+    >
+      <a
+        href="/"
+        class="underline underline-offset-4"
+        aria-current="page"
       >
-        nightlampexecute.com
+        home
+      </a>
+
+      <span
+        class="text-[#ffd800]/45"
+        aria-hidden="true"
+      >
+        /
       </span>
 
       <a
         href="/press"
-        class="text-xs lowercase tracking-[0.2em] text-[#ffd800] underline-offset-4 transition-opacity hover:opacity-60 hover:underline"
+        class="underline-offset-4 transition-opacity hover:opacity-60 hover:underline"
       >
         press
       </a>
-    </div>
+    </nav>
 
+    <!-- RIGHT -->
     <span
       class="text-right text-xs lowercase tracking-[0.2em] text-[#ffd800]"
     >
@@ -90,143 +113,146 @@ const links = [
     </div>
   </div>
 
-  <!-- CURRENT RELEASE -->
+  <!-- SCORIA 24–26 -->
   <div
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 md:px-10 md:pb-28"
   >
-    <div class="mb-5 flex items-center gap-4">
+    <div
+      class="mb-5 flex items-center gap-4"
+    >
       <span
         class="text-sm lowercase tracking-[0.2em] text-[#ffd800]"
       >
-        current release
+        scoria 24–26
       </span>
 
-      <div class="h-px flex-1 bg-[#665700]"></div>
+      <div
+        class="h-px flex-1 bg-[#665700]"
+      ></div>
     </div>
 
     <div
-      class="grid grid-cols-1 border border-[#665700] bg-[#050505]/70 backdrop-blur-[3px] lg:grid-cols-[0.7fr_1.3fr]"
+      class="border border-[#665700] bg-[#050505]/70 backdrop-blur-[3px]"
     >
-      <!-- RELEASE INFO -->
+      <!-- RELEASE HEADER -->
       <div
-        class="border-b border-[#665700] p-6 lg:border-b-0 lg:border-r lg:p-10"
+        class="flex flex-col gap-4 border-b border-[#665700] p-6 md:flex-row md:items-end md:justify-between md:p-10"
       >
+        <div>
+          <span
+            class="mb-3 block text-xs lowercase tracking-[0.2em] text-[#ffd800]/55"
+          >
+            album / 2026
+          </span>
+
+          <h2
+            class="text-4xl font-normal tracking-[-0.045em] text-[#ffd800] md:text-6xl"
+          >
+            scoria 24–26
+          </h2>
+        </div>
+
         <span
-          class="mb-4 block text-xs lowercase tracking-[0.2em] text-[#ffd800]/60"
+          class="max-w-sm text-sm lowercase leading-relaxed tracking-[0.08em] text-[#ffd800]/65 md:text-right"
         >
-          album / 2026
+          breakcore / jungle / drum & bass / industrial electronics
         </span>
-
-        <h2
-          class="text-4xl font-normal tracking-[-0.04em] text-[#ffd800] md:text-6xl"
-        >
-          scoria 24–26
-        </h2>
-
-        <p
-          class="mt-6 max-w-md text-base leading-relaxed text-[#ffd800]/80"
-        >
-          industrial electronics, breakcore, jungle, drum & bass and
-          experimental club music.
-        </p>
-
-        <a
-          href="/press"
-          class="mt-8 inline-flex border border-[#ffd800] px-5 py-3 text-sm lowercase tracking-[0.15em] text-[#ffd800] transition-colors hover:bg-[#ffd800] hover:text-black"
-        >
-          press / downloads →
-        </a>
       </div>
 
       <!-- PLAYERS -->
-      <div class="flex flex-col gap-10 p-6 lg:p-10">
-
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2"
+      >
         <!-- BANDCAMP -->
-        <div>
-          <div class="mb-4 flex items-center justify-between">
+        <div
+          class="border-b border-[#665700] p-6 lg:border-b-0 lg:border-r lg:p-10"
+        >
+          <div
+            class="mb-5 flex items-center justify-between"
+          >
             <span
-              class="text-xs lowercase tracking-[0.2em] text-[#ffd800]/60"
+              class="text-xs lowercase tracking-[0.2em] text-[#ffd800]/55"
             >
               bandcamp
             </span>
 
             <a
-              href="https://nightlampexecute.bandcamp.com/"
+              href="https://nightlampexecute.bandcamp.com/album/scoria-24-26"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-xs lowercase tracking-[0.15em] text-[#ffd800] hover:underline"
-            >
-              open ↗
-            </a>
-          </div>
-
-          <div class="bandcamp-player w-full overflow-hidden">
-            <!--
-              REPLACE THIS COMMENT WITH THE IFRAME BANDCAMP
-              GIVES YOU FROM:
-
-              album page → Share / Embed → Embed this album
-            -->
-
-            <div
-              class="flex min-h-40 items-center justify-center border border-dashed border-[#665700] p-6 text-center"
-            >
-              <span
-                class="text-sm lowercase tracking-[0.15em] text-[#ffd800]/50"
-              >
-                bandcamp album player
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- SPOTIFY -->
-        <div>
-          <div class="mb-4 flex items-center justify-between">
-            <span
-              class="text-xs lowercase tracking-[0.2em] text-[#ffd800]/60"
-            >
-              spotify
-            </span>
-
-            <a
-              href="https://open.spotify.com/artist/2jEIRuYF0JnnR6jtAMRBcq"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-xs lowercase tracking-[0.15em] text-[#ffd800] hover:underline"
+              class="text-xs lowercase tracking-[0.15em] text-[#ffd800] underline-offset-4 hover:underline"
             >
               open ↗
             </a>
           </div>
 
           <iframe
-            src="https://open.spotify.com/embed/artist/2jEIRuYF0JnnR6jtAMRBcq?utm_source=generator&theme=0"
+            style="border: 0; width: 100%; height: 120px;"
+            src="https://bandcamp.com/EmbeddedPlayer/album=2387949515/size=large/bgcol=050505/linkcol=ffd800/tracklist=false/artwork=small/transparent=true/"
+            seamless
+            title="scoria 24–26 by nightlamp.exe on Bandcamp"
+          >
+            <a
+              href="https://nightlampexecute.bandcamp.com/album/scoria-24-26"
+            >
+              scoria 24–26 by nightlamp.exe
+            </a>
+          </iframe>
+        </div>
+
+        <!-- SPOTIFY -->
+        <div
+          class="p-6 lg:p-10"
+        >
+          <div
+            class="mb-5 flex items-center justify-between"
+          >
+            <span
+              class="text-xs lowercase tracking-[0.2em] text-[#ffd800]/55"
+            >
+              spotify
+            </span>
+
+            <a
+              href="https://open.spotify.com/album/6JEbZiYiLpWgBQeSnbchsj"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-xs lowercase tracking-[0.15em] text-[#ffd800] underline-offset-4 hover:underline"
+            >
+              open ↗
+            </a>
+          </div>
+
+          <iframe
+            src="https://open.spotify.com/embed/album/6JEbZiYiLpWgBQeSnbchsj?utm_source=generator&theme=0"
             width="100%"
             height="352"
-            frameborder="0"
-            allowfullscreen
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
             loading="lazy"
             class="spotify-player"
+            title="scoria 24–26 by nightlamp.exe on Spotify"
           ></iframe>
         </div>
-
       </div>
     </div>
   </div>
 
-  <!-- LINKS -->
+  <!-- LISTEN / FOLLOW -->
   <div
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 md:px-10 md:pb-28"
   >
-    <div class="mb-5 flex items-center gap-4">
+    <div
+      class="mb-5 flex items-center gap-4"
+    >
       <span
         class="text-sm lowercase tracking-[0.2em] text-[#ffd800]"
       >
         listen / follow
       </span>
 
-      <div class="h-px flex-1 bg-[#665700]"></div>
+      <div
+        class="h-px flex-1 bg-[#665700]"
+      ></div>
     </div>
 
     <div
@@ -254,7 +280,9 @@ const links = [
               </span>
             </div>
 
-            <div class="text-right">
+            <div
+              class="text-right"
+            >
               <span
                 class="mb-3 block text-sm lowercase tracking-[0.08em] text-[#ffd800] group-hover:text-black"
               >
@@ -270,40 +298,6 @@ const links = [
           </a>
         ))
       }
-
-      <!-- PRESS TILE -->
-      <a
-        href="/press"
-        class="group flex min-h-32 items-end justify-between border-b border-r border-[#665700] p-6 transition-all duration-200 hover:bg-[#ffd800] md:col-span-2 md:min-h-40"
-      >
-        <div>
-          <span
-            class="mb-3 block text-sm text-[#ffd800] group-hover:text-black"
-          >
-            05
-          </span>
-
-          <span
-            class="block text-3xl font-normal tracking-[-0.035em] text-[#ffd800] group-hover:text-black md:text-5xl"
-          >
-            PRESS
-          </span>
-        </div>
-
-        <div class="text-right">
-          <span
-            class="mb-3 block text-sm lowercase tracking-[0.08em] text-[#ffd800] group-hover:text-black"
-          >
-            bio / photos / downloads
-          </span>
-
-          <span
-            class="text-2xl text-[#ffd800] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black"
-          >
-            →
-          </span>
-        </div>
-      </a>
     </div>
   </div>
 
@@ -322,10 +316,17 @@ const links = [
     opacity: number;
   };
 
-  const canvas = document.querySelector("#binary-background");
+  const canvas =
+    document.querySelector(
+      "#binary-background"
+    );
 
-  if (canvas instanceof HTMLCanvasElement) {
-    const ctx = canvas.getContext("2d");
+  if (
+    canvas instanceof
+    HTMLCanvasElement
+  ) {
+    const ctx =
+      canvas.getContext("2d");
 
     if (ctx) {
       let width = 0;
@@ -333,124 +334,247 @@ const links = [
       let columns = 0;
       let rows = 0;
 
-      let animationFrame = 0;
       let lastUpdate = 0;
-      let resizeTimer: number | undefined;
+
+      let resizeTimer:
+        number | undefined;
 
       const fontSize = 15;
       const charWidth = 11;
       const charHeight = 20;
 
-      let characters: BinaryCharacter[] = [];
+      let characters:
+        BinaryCharacter[] = [];
 
-      const randomBinary = (): "0" | "1" => {
-        return Math.random() > 0.5 ? "1" : "0";
-      };
+      const randomBinary =
+        (): "0" | "1" => {
+          return Math.random() > 0.5
+            ? "1"
+            : "0";
+        };
 
-      const initialise = (): void => {
-        const section = document.querySelector("#home");
+      const initialise =
+        (): void => {
+          const section =
+            document.querySelector(
+              "#home"
+            );
 
-        if (!(section instanceof HTMLElement)) {
-          return;
-        }
-
-        const rect = section.getBoundingClientRect();
-        const dpr = window.devicePixelRatio || 1;
-
-        width = rect.width;
-        height = rect.height;
-
-        canvas.width = Math.floor(width * dpr);
-        canvas.height = Math.floor(height * dpr);
-
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
-
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-        columns = Math.ceil(width / charWidth);
-        rows = Math.ceil(height / charHeight);
-
-        characters = Array.from(
-          { length: columns * rows },
-          (): BinaryCharacter => ({
-            value: randomBinary(),
-            opacity: 0.08 + Math.random() * 0.3,
-          })
-        );
-
-        draw();
-      };
-
-      const draw = (): void => {
-        ctx.clearRect(0, 0, width, height);
-
-        ctx.font = `${fontSize}px monospace`;
-        ctx.textBaseline = "top";
-
-        characters.forEach(
-          (character: BinaryCharacter, index: number): void => {
-            const x = (index % columns) * charWidth;
-            const y = Math.floor(index / columns) * charHeight;
-
-            ctx.fillStyle = `rgba(255, 216, 0, ${character.opacity})`;
-            ctx.fillText(character.value, x, y);
+          if (
+            !(
+              section instanceof
+              HTMLElement
+            )
+          ) {
+            return;
           }
-        );
-      };
 
-      const update = (): void => {
-        if (characters.length === 0) {
-          return;
-        }
+          const rect =
+            section.getBoundingClientRect();
 
-        const amountToChange = Math.max(
-          1,
-          Math.floor(characters.length * 0.035)
-        );
+          const dpr =
+            window.devicePixelRatio ||
+            1;
 
-        for (let i = 0; i < amountToChange; i++) {
-          const index = Math.floor(
-            Math.random() * characters.length
+          width = rect.width;
+          height = rect.height;
+
+          canvas.width =
+            Math.floor(
+              width * dpr
+            );
+
+          canvas.height =
+            Math.floor(
+              height * dpr
+            );
+
+          canvas.style.width =
+            `${width}px`;
+
+          canvas.style.height =
+            `${height}px`;
+
+          ctx.setTransform(
+            dpr,
+            0,
+            0,
+            dpr,
+            0,
+            0
           );
 
-          const character = characters[index];
+          columns =
+            Math.ceil(
+              width /
+                charWidth
+            );
 
-          if (!character) {
-            continue;
+          rows =
+            Math.ceil(
+              height /
+                charHeight
+            );
+
+          characters =
+            Array.from(
+              {
+                length:
+                  columns *
+                  rows,
+              },
+              (): BinaryCharacter => ({
+                value:
+                  randomBinary(),
+
+                opacity:
+                  0.08 +
+                  Math.random() *
+                    0.3,
+              })
+            );
+
+          draw();
+        };
+
+      const draw =
+        (): void => {
+          ctx.clearRect(
+            0,
+            0,
+            width,
+            height
+          );
+
+          ctx.font =
+            `${fontSize}px monospace`;
+
+          ctx.textBaseline =
+            "top";
+
+          characters.forEach(
+            (
+              character:
+                BinaryCharacter,
+              index: number
+            ): void => {
+              const x =
+                (index %
+                  columns) *
+                charWidth;
+
+              const y =
+                Math.floor(
+                  index /
+                    columns
+                ) *
+                charHeight;
+
+              ctx.fillStyle =
+                `rgba(255, 216, 0, ${character.opacity})`;
+
+              ctx.fillText(
+                character.value,
+                x,
+                y
+              );
+            }
+          );
+        };
+
+      const update =
+        (): void => {
+          if (
+            characters.length ===
+            0
+          ) {
+            return;
           }
 
-          character.value = randomBinary();
-          character.opacity =
-            0.08 + Math.random() * 0.38;
-        }
-      };
+          const amountToChange =
+            Math.max(
+              1,
 
-      const animate = (time: number): void => {
-        if (time - lastUpdate > 55) {
+              Math.floor(
+                characters.length *
+                  0.035
+              )
+            );
+
+          for (
+            let i = 0;
+            i <
+            amountToChange;
+            i++
+          ) {
+            const index =
+              Math.floor(
+                Math.random() *
+                  characters.length
+              );
+
+            const character =
+              characters[index];
+
+            if (!character) {
+              continue;
+            }
+
+            character.value =
+              randomBinary();
+
+            character.opacity =
+              0.08 +
+              Math.random() *
+                0.38;
+          }
+        };
+
+      const animate = (
+        time: number
+      ): void => {
+        if (
+          time -
+            lastUpdate >
+          55
+        ) {
           update();
           draw();
-          lastUpdate = time;
+
+          lastUpdate =
+            time;
         }
 
-        animationFrame =
-          window.requestAnimationFrame(animate);
+        window.requestAnimationFrame(
+          animate
+        );
       };
 
-      const handleResize = (): void => {
-        if (resizeTimer !== undefined) {
-          window.clearTimeout(resizeTimer);
-        }
+      const handleResize =
+        (): void => {
+          if (
+            resizeTimer !==
+            undefined
+          ) {
+            window.clearTimeout(
+              resizeTimer
+            );
+          }
 
-        resizeTimer = window.setTimeout((): void => {
-          initialise();
-        }, 150);
-      };
+          resizeTimer =
+            window.setTimeout(
+              (): void => {
+                initialise();
+              },
+              150
+            );
+        };
 
       initialise();
 
-      animationFrame =
-        window.requestAnimationFrame(animate);
+      window.requestAnimationFrame(
+        animate
+      );
 
       window.addEventListener(
         "resize",
@@ -463,10 +587,7 @@ const links = [
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap");
 
-  html {
-    background: #050505;
-  }
-
+  html,
   body {
     margin: 0;
     background: #050505;
@@ -496,27 +617,46 @@ const links = [
   .background-grid {
     background-image:
       linear-gradient(
-        rgba(255, 216, 0, 0.025) 1px,
-        transparent 1px
+        rgba(
+            255,
+            216,
+            0,
+            0.025
+          )
+          1px,
+        transparent
+          1px
       ),
       linear-gradient(
         90deg,
-        rgba(255, 216, 0, 0.025) 1px,
-        transparent 1px
+        rgba(
+            255,
+            216,
+            0,
+            0.025
+          )
+          1px,
+        transparent
+          1px
       );
 
-    background-size: 48px 48px;
+    background-size:
+      48px 48px;
 
-    mask-image: linear-gradient(
-      to bottom,
-      black,
-      transparent 95%
-    );
+    mask-image:
+      linear-gradient(
+        to bottom,
+        black,
+        transparent
+          95%
+      );
   }
 
   #home::before {
     content: "";
+
     position: absolute;
+
     z-index: 3;
 
     width: 650px;
@@ -525,18 +665,26 @@ const links = [
     right: -300px;
     top: 60px;
 
-    background: #ffd800;
+    background:
+      #ffd800;
+
     opacity: 0.045;
 
-    filter: blur(120px);
-    border-radius: 9999px;
+    filter:
+      blur(120px);
 
-    pointer-events: none;
+    border-radius:
+      9999px;
+
+    pointer-events:
+      none;
   }
 
   #home::after {
     content: "";
+
     position: absolute;
+
     z-index: 3;
 
     width: 450px;
@@ -545,27 +693,39 @@ const links = [
     left: -250px;
     bottom: 100px;
 
-    background: #ffd800;
+    background:
+      #ffd800;
+
     opacity: 0.025;
 
-    filter: blur(120px);
-    border-radius: 9999px;
+    filter:
+      blur(120px);
 
-    pointer-events: none;
-  }
+    border-radius:
+      9999px;
 
-  .bandcamp-player iframe {
-    width: 100% !important;
-    max-width: 100% !important;
+    pointer-events:
+      none;
   }
 
   .spotify-player {
     display: block;
     border: 0;
+    border-radius: 0;
   }
 
   ::selection {
-    background: #ffd800;
-    color: #000000;
+    background:
+      #ffd800;
+
+    color:
+      #000000;
+  }
+
+  @media (max-width: 640px) {
+    #home nav {
+      letter-spacing:
+        0.12em;
+    }
   }
 </style>
