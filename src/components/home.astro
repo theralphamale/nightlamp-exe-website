@@ -2,22 +2,22 @@
 const links = [
   {
     name: "BANDCAMP",
-    url: "https://YOUR-BANDCAMP-URL",
+    url: "https://nightlampexecute.bandcamp.com/",
     detail: "music / downloads",
   },
   {
     name: "SPOTIFY",
-    url: "https://YOUR-SPOTIFY-URL",
+    url: "https://open.spotify.com/artist/2jEIRuYF0JnnR6jtAMRBcq",
     detail: "stream",
   },
   {
     name: "SOUNDCLOUD",
-    url: "https://YOUR-SOUNDCLOUD-URL",
+    url: "https://soundcloud.com/nightlampexecute",
     detail: "tracks / mixes",
   },
   {
     name: "INSTAGRAM",
-    url: "https://YOUR-INSTAGRAM-URL",
+    url: "https://www.instagram.com/nightlamp.exe/",
     detail: "updates",
   },
 ];
@@ -25,7 +25,7 @@ const links = [
 
 <section
   id="home"
-  class="relative min-h-screen overflow-hidden bg-[#050505] text-[#ffd800]"
+  class="nightlamp-font relative min-h-screen overflow-hidden bg-[#050505] text-[#ffd800]"
 >
   <!-- MOVING BINARY BACKGROUND -->
   <canvas
@@ -49,13 +49,13 @@ const links = [
     class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-6 md:px-10"
   >
     <span
-      class="font-mono text-xs uppercase tracking-[0.25em] text-[#ffd800]"
+      class="text-xs uppercase tracking-[0.25em] text-[#ffd800]"
     >
       independent electronic music
     </span>
 
     <span
-      class="hidden font-mono text-xs uppercase tracking-[0.25em] text-[#ffd800] sm:block"
+      class="hidden text-xs uppercase tracking-[0.25em] text-[#ffd800] sm:block"
     >
       nightlampexecute.com
     </span>
@@ -66,22 +66,23 @@ const links = [
     class="relative z-10 mx-auto flex min-h-[72vh] w-full max-w-7xl flex-col justify-center px-6 py-20 md:px-10"
   >
     <p
-      class="mb-5 font-mono text-xs uppercase tracking-[0.35em] text-[#ffd800]"
+      class="mb-6 text-sm lowercase tracking-[0.18em] text-[#ffd800]"
     >
       nightlamp.exe
     </p>
 
     <h1
-      class="max-w-6xl break-words text-[15vw] font-black leading-[0.78] tracking-[-0.075em] text-[#ffd800] sm:text-[12vw] lg:text-[9rem]"
+      class="nightlamp-title max-w-6xl break-words text-[16vw] font-normal leading-[0.78] tracking-[-0.07em] text-[#ffd800] sm:text-[13vw] lg:text-[9rem]"
     >
-      NIGHTLAMP<br />
-      <span>.EXE</span>
+      nightlamp.exe
     </h1>
 
     <div
       class="mt-12 max-w-2xl border-l border-[#ffd800] bg-[#050505]/30 pl-5 backdrop-blur-[2px]"
     >
-      <p class="text-lg leading-relaxed text-[#ffd800] md:text-xl">
+      <p
+        class="text-xl font-normal leading-relaxed text-[#ffd800] md:text-2xl"
+      >
         nightlamp.exe is an independent electronic project working across
         breakbeats, distortion, jungle, techno and experimental club music.
       </p>
@@ -94,7 +95,7 @@ const links = [
   >
     <div class="mb-5 flex items-center gap-4">
       <span
-        class="font-mono text-xs uppercase tracking-[0.3em] text-[#ffd800]"
+        class="text-sm lowercase tracking-[0.2em] text-[#ffd800]"
       >
         listen / follow
       </span>
@@ -115,13 +116,13 @@ const links = [
           >
             <div>
               <span
-                class="mb-2 block font-mono text-xs text-[#ffd800] group-hover:text-black"
+                class="mb-3 block text-sm text-[#ffd800] group-hover:text-black"
               >
                 0{index + 1}
               </span>
 
               <span
-                class="text-2xl font-bold tracking-tight text-[#ffd800] group-hover:text-black md:text-3xl"
+                class="block text-3xl font-normal tracking-[-0.035em] text-[#ffd800] group-hover:text-black md:text-5xl"
               >
                 {link.name}
               </span>
@@ -129,13 +130,13 @@ const links = [
 
             <div class="text-right">
               <span
-                class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#ffd800] group-hover:text-black"
+                class="mb-3 block text-sm lowercase tracking-[0.08em] text-[#ffd800] group-hover:text-black"
               >
                 {link.detail}
               </span>
 
               <span
-                class="text-xl text-[#ffd800] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black"
+                class="text-2xl text-[#ffd800] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black"
               >
                 ↗
               </span>
@@ -148,7 +149,7 @@ const links = [
 
   <!-- FOOTER -->
   <div
-    class="relative z-10 mx-auto flex w-full max-w-7xl justify-between border-t border-[#665700] px-6 py-5 font-mono text-[10px] uppercase tracking-[0.2em] text-[#ffd800] md:px-10"
+    class="relative z-10 mx-auto flex w-full max-w-7xl justify-between border-t border-[#665700] px-6 py-5 text-xs lowercase tracking-[0.15em] text-[#ffd800] md:px-10"
   >
     <span>nightlamp.exe</span>
     <span>ireland</span>
@@ -232,7 +233,8 @@ const links = [
             const x = (index % columns) * charWidth;
             const y = Math.floor(index / columns) * charHeight;
 
-            ctx.fillStyle = `rgba(255, 216, 0, ${character.opacity})`;
+            ctx.fillStyle =
+              `rgba(255, 216, 0, ${character.opacity})`;
 
             ctx.fillText(
               character.value,
@@ -305,7 +307,30 @@ const links = [
   }
 </script>
 
-<style>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&display=swap");
+
+  .nightlamp-font {
+    font-family:
+      "Bodoni Moda",
+      "Bodoni 72",
+      Didot,
+      "Times New Roman",
+      serif;
+  }
+
+  .nightlamp-title {
+    font-family:
+      "Bodoni Moda",
+      "Bodoni 72",
+      Didot,
+      "Times New Roman",
+      serif;
+
+    font-weight: 400;
+    font-optical-sizing: auto;
+  }
+
   .background-grid {
     background-image:
       linear-gradient(
