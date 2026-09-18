@@ -8,8 +8,8 @@ const pressPhotos = [
   },
   {
     number: "02",
-    image: "/press/nightlamp-press-02.jpg",
-    download: "/press/nightlamp-press-02.jpg",
+    image: "/press/nightlamp-press-02.png",
+    download: "/press/nightlamp-press-02.png",
     alt: "nightlamp.exe press photograph 02",
   },
 ];
@@ -18,18 +18,22 @@ const externalLinks = [
   {
     name: "BANDCAMP",
     url: "https://nightlampexecute.bandcamp.com/",
+    detail: "music / downloads",
   },
   {
     name: "SPOTIFY",
     url: "https://open.spotify.com/artist/2jEIRuYF0JnnR6jtAMRBcq",
+    detail: "stream",
   },
   {
     name: "SOUNDCLOUD",
     url: "https://soundcloud.com/nightlampexecute",
+    detail: "tracks / mixes",
   },
   {
     name: "INSTAGRAM",
     url: "https://www.instagram.com/nightlamp.exe/",
+    detail: "updates",
   },
 ];
 ---
@@ -38,7 +42,7 @@ const externalLinks = [
   id="press"
   class="nightlamp-font relative min-h-screen overflow-hidden bg-[#050505] text-[#ffd800]"
 >
-  <!-- BINARY BACKGROUND -->
+  <!-- ANIMATED BINARY BACKGROUND -->
   <canvas
     id="press-binary-background"
     class="pointer-events-none fixed inset-0 z-0 h-screen w-screen"
@@ -61,7 +65,7 @@ const externalLinks = [
   >
     <a
       href="/"
-      class="text-xs lowercase tracking-[0.2em] text-[#ffd800] underline-offset-4 hover:underline"
+      class="text-xs lowercase tracking-[0.2em] text-[#ffd800] underline-offset-4 transition-opacity hover:opacity-60 hover:underline"
     >
       ← nightlampexecute.com
     </a>
@@ -107,7 +111,9 @@ const externalLinks = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-10 md:pb-32"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="text-sm lowercase tracking-[0.2em]">
+      <span
+        class="text-sm lowercase tracking-[0.2em]"
+      >
         listen
       </span>
 
@@ -127,13 +133,15 @@ const externalLinks = [
         </span>
 
         <h2
-          class="mt-4 text-5xl tracking-[-0.045em] md:text-7xl"
+          class="mt-4 text-5xl font-normal tracking-[-0.045em] md:text-7xl"
         >
           juliet
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2"
+      >
         <!-- BANDCAMP -->
         <div
           class="border-b border-[#665700] p-6 lg:border-b-0 lg:border-r lg:p-10"
@@ -149,13 +157,19 @@ const externalLinks = [
               href="https://nightlampexecute.bandcamp.com/"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-xs lowercase tracking-[0.15em] hover:underline"
+              class="text-xs lowercase tracking-[0.15em] underline-offset-4 hover:underline"
             >
               open ↗
             </a>
           </div>
 
-          <!-- PASTE BANDCAMP JULIET EMBED HERE -->
+          <!--
+            REPLACE THE BOX BELOW WITH THE BANDCAMP EMBED FOR JULIET.
+
+            On Bandcamp:
+            JULIET → Share / Embed → Embed this track
+          -->
+
           <div
             class="flex min-h-52 items-center justify-center border border-dashed border-[#665700] p-8"
           >
@@ -180,11 +194,18 @@ const externalLinks = [
               href="https://open.spotify.com/artist/2jEIRuYF0JnnR6jtAMRBcq"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-xs lowercase tracking-[0.15em] hover:underline"
+              class="text-xs lowercase tracking-[0.15em] underline-offset-4 hover:underline"
             >
               open ↗
             </a>
           </div>
+
+          <!--
+            REPLACE THIS ARTIST EMBED WITH THE JULIET TRACK EMBED.
+
+            Example:
+            https://open.spotify.com/embed/track/TRACK_ID
+          -->
 
           <iframe
             src="https://open.spotify.com/embed/artist/2jEIRuYF0JnnR6jtAMRBcq?utm_source=generator&theme=0"
@@ -205,7 +226,9 @@ const externalLinks = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-10 md:pb-32"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="text-sm lowercase tracking-[0.2em]">
+      <span
+        class="text-sm lowercase tracking-[0.2em]"
+      >
         release
       </span>
 
@@ -225,7 +248,7 @@ const externalLinks = [
         </span>
 
         <h2
-          class="mt-4 text-5xl tracking-[-0.045em] md:text-7xl"
+          class="mt-4 text-5xl font-normal tracking-[-0.045em] md:text-7xl"
         >
           scoria 24–26
         </h2>
@@ -242,8 +265,8 @@ const externalLinks = [
 
         <p class="mt-6">
           Dense percussion, distortion and abrasive electronic textures
-          sit alongside more melodic passages, with substantial shifts in
-          tempo, atmosphere and structure across the record.
+          sit alongside more melodic passages, with substantial shifts
+          in tempo, atmosphere and structure across the record.
         </p>
       </div>
     </div>
@@ -251,7 +274,9 @@ const externalLinks = [
     <dl
       class="grid border-l border-[#665700] bg-[#050505]/75 backdrop-blur-[3px] sm:grid-cols-2 lg:grid-cols-4"
     >
-      <div class="border-b border-r border-[#665700] p-6">
+      <div
+        class="border-b border-r border-[#665700] p-6"
+      >
         <dt class="press-label">
           artist
         </dt>
@@ -261,7 +286,9 @@ const externalLinks = [
         </dd>
       </div>
 
-      <div class="border-b border-r border-[#665700] p-6">
+      <div
+        class="border-b border-r border-[#665700] p-6"
+      >
         <dt class="press-label">
           location
         </dt>
@@ -271,7 +298,9 @@ const externalLinks = [
         </dd>
       </div>
 
-      <div class="border-b border-r border-[#665700] p-6">
+      <div
+        class="border-b border-r border-[#665700] p-6"
+      >
         <dt class="press-label">
           written / produced
         </dt>
@@ -281,7 +310,9 @@ const externalLinks = [
         </dd>
       </div>
 
-      <div class="border-b border-r border-[#665700] p-6">
+      <div
+        class="border-b border-r border-[#665700] p-6"
+      >
         <dt class="press-label">
           release date
         </dt>
@@ -298,7 +329,9 @@ const externalLinks = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-10 md:pb-32"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="text-sm lowercase tracking-[0.2em]">
+      <span
+        class="text-sm lowercase tracking-[0.2em]"
+      >
         biography
       </span>
 
@@ -333,7 +366,9 @@ const externalLinks = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-10 md:pb-32"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="text-sm lowercase tracking-[0.2em]">
+      <span
+        class="text-sm lowercase tracking-[0.2em]"
+      >
         press photographs
       </span>
 
@@ -372,7 +407,9 @@ const externalLinks = [
                   press photograph
                 </span>
 
-                <span class="mt-1 block text-xl">
+                <span
+                  class="mt-1 block text-xl"
+                >
                   {photo.number}
                 </span>
               </div>
@@ -402,7 +439,9 @@ const externalLinks = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-10 md:pb-32"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="text-sm lowercase tracking-[0.2em]">
+      <span
+        class="text-sm lowercase tracking-[0.2em]"
+      >
         downloads
       </span>
 
@@ -412,11 +451,12 @@ const externalLinks = [
     <div
       class="grid border-l border-t border-[#665700] bg-[#050505]/75 backdrop-blur-[3px] md:grid-cols-2"
     >
+      <!-- JULIET WAV -->
       <a
         href="PASTE-JULIET-WAV-LINK-HERE"
         target="_blank"
         rel="noopener noreferrer"
-        class="download-link"
+        class="download-link group"
       >
         <div>
           <span class="download-number">
@@ -439,11 +479,12 @@ const externalLinks = [
         </div>
       </a>
 
+      <!-- FULL ALBUM -->
       <a
         href="PASTE-ALBUM-WAV-LINK-HERE"
         target="_blank"
         rel="noopener noreferrer"
-        class="download-link"
+        class="download-link group"
       >
         <div>
           <span class="download-number">
@@ -466,11 +507,12 @@ const externalLinks = [
         </div>
       </a>
 
+      <!-- ARTWORK -->
       <a
         href="PASTE-ARTWORK-LINK-HERE"
         target="_blank"
         rel="noopener noreferrer"
-        class="download-link"
+        class="download-link group"
       >
         <div>
           <span class="download-number">
@@ -493,9 +535,10 @@ const externalLinks = [
         </div>
       </a>
 
+      <!-- CONTACT -->
       <a
         href="mailto:YOUR-EMAIL-HERE"
-        class="download-link"
+        class="download-link group"
       >
         <div>
           <span class="download-number">
@@ -525,7 +568,9 @@ const externalLinks = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-24 md:px-10"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="text-sm lowercase tracking-[0.2em]">
+      <span
+        class="text-sm lowercase tracking-[0.2em]"
+      >
         listen / follow
       </span>
 
@@ -541,7 +586,7 @@ const externalLinks = [
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex min-h-32 items-end justify-between border-b border-r border-[#665700] p-6 transition-colors hover:bg-[#ffd800]"
+            class="group flex min-h-32 items-end justify-between border-b border-r border-[#665700] p-6 transition-all duration-200 hover:bg-[#ffd800]"
           >
             <div>
               <span
@@ -551,17 +596,25 @@ const externalLinks = [
               </span>
 
               <span
-                class="block text-3xl tracking-[-0.035em] text-[#ffd800] group-hover:text-black"
+                class="block text-3xl font-normal tracking-[-0.035em] text-[#ffd800] group-hover:text-black md:text-4xl"
               >
                 {link.name}
               </span>
             </div>
 
-            <span
-              class="text-2xl text-[#ffd800] group-hover:text-black"
-            >
-              ↗
-            </span>
+            <div class="text-right">
+              <span
+                class="mb-3 block text-xs lowercase tracking-[0.1em] text-[#ffd800] group-hover:text-black"
+              >
+                {link.detail}
+              </span>
+
+              <span
+                class="text-2xl text-[#ffd800] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black"
+              >
+                ↗
+              </span>
+            </div>
           </a>
         ))
       }
@@ -570,7 +623,7 @@ const externalLinks = [
 
   <!-- FOOTER -->
   <div
-    class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between border-t border-[#665700] px-6 py-5 text-xs lowercase tracking-[0.15em] md:px-10"
+    class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between border-t border-[#665700] px-6 py-5 text-xs lowercase tracking-[0.15em] text-[#ffd800] md:px-10"
   >
     <span>nightlamp.exe</span>
 
@@ -591,7 +644,9 @@ const externalLinks = [
     opacity: number;
   };
 
-  const canvas = document.querySelector("#press-binary-background");
+  const canvas = document.querySelector(
+    "#press-binary-background"
+  );
 
   if (canvas instanceof HTMLCanvasElement) {
     const ctx = canvas.getContext("2d");
@@ -601,6 +656,7 @@ const externalLinks = [
       let height = 0;
       let columns = 0;
       let rows = 0;
+
       let lastUpdate = 0;
       let resizeTimer: number | undefined;
 
@@ -626,16 +682,32 @@ const externalLinks = [
         canvas.style.width = `${width}px`;
         canvas.style.height = `${height}px`;
 
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        ctx.setTransform(
+          dpr,
+          0,
+          0,
+          dpr,
+          0,
+          0
+        );
 
-        columns = Math.ceil(width / charWidth);
-        rows = Math.ceil(height / charHeight);
+        columns = Math.ceil(
+          width / charWidth
+        );
+
+        rows = Math.ceil(
+          height / charHeight
+        );
 
         characters = Array.from(
-          { length: columns * rows },
+          {
+            length: columns * rows,
+          },
           (): BinaryCharacter => ({
             value: randomBinary(),
-            opacity: 0.08 + Math.random() * 0.3,
+            opacity:
+              0.08 +
+              Math.random() * 0.3,
           })
         );
 
@@ -643,70 +715,130 @@ const externalLinks = [
       };
 
       const draw = (): void => {
-        ctx.clearRect(0, 0, width, height);
+        ctx.clearRect(
+          0,
+          0,
+          width,
+          height
+        );
 
-        ctx.font = `${fontSize}px monospace`;
+        ctx.font =
+          `${fontSize}px monospace`;
+
         ctx.textBaseline = "top";
 
-        characters.forEach((character, index) => {
-          const x = (index % columns) * charWidth;
-          const y = Math.floor(index / columns) * charHeight;
+        characters.forEach(
+          (
+            character: BinaryCharacter,
+            index: number
+          ): void => {
+            const x =
+              (index % columns) *
+              charWidth;
 
-          ctx.fillStyle = `rgba(255, 216, 0, ${character.opacity})`;
-          ctx.fillText(character.value, x, y);
-        });
+            const y =
+              Math.floor(
+                index / columns
+              ) * charHeight;
+
+            ctx.fillStyle =
+              `rgba(255, 216, 0, ${character.opacity})`;
+
+            ctx.fillText(
+              character.value,
+              x,
+              y
+            );
+          }
+        );
       };
 
       const update = (): void => {
-        if (characters.length === 0) {
+        if (
+          characters.length === 0
+        ) {
           return;
         }
 
-        const amountToChange = Math.max(
-          1,
-          Math.floor(characters.length * 0.035)
-        );
-
-        for (let i = 0; i < amountToChange; i++) {
-          const index = Math.floor(
-            Math.random() * characters.length
+        const amountToChange =
+          Math.max(
+            1,
+            Math.floor(
+              characters.length *
+              0.035
+            )
           );
 
-          const character = characters[index];
+        for (
+          let i = 0;
+          i < amountToChange;
+          i++
+        ) {
+          const index =
+            Math.floor(
+              Math.random() *
+              characters.length
+            );
+
+          const character =
+            characters[index];
 
           if (!character) {
             continue;
           }
 
-          character.value = randomBinary();
+          character.value =
+            randomBinary();
+
           character.opacity =
-            0.08 + Math.random() * 0.38;
+            0.08 +
+            Math.random() *
+            0.38;
         }
       };
 
-      const animate = (time: number): void => {
-        if (time - lastUpdate > 55) {
+      const animate = (
+        time: number
+      ): void => {
+        if (
+          time - lastUpdate >
+          55
+        ) {
           update();
           draw();
           lastUpdate = time;
         }
 
-        window.requestAnimationFrame(animate);
+        window.requestAnimationFrame(
+          animate
+        );
       };
 
-      const handleResize = (): void => {
-        if (resizeTimer !== undefined) {
-          window.clearTimeout(resizeTimer);
-        }
+      const handleResize =
+        (): void => {
+          if (
+            resizeTimer !==
+            undefined
+          ) {
+            window.clearTimeout(
+              resizeTimer
+            );
+          }
 
-        resizeTimer = window.setTimeout(() => {
-          initialise();
-        }, 150);
-      };
+          resizeTimer =
+            window.setTimeout(
+              (): void => {
+                initialise();
+              },
+              150
+            );
+        };
 
       initialise();
 
-      window.requestAnimationFrame(animate);
+      window.requestAnimationFrame(
+        animate
+      );
 
       window.addEventListener(
         "resize",
@@ -741,6 +873,7 @@ const externalLinks = [
       Didot,
       "Times New Roman",
       serif;
+
     font-weight: 400;
     font-optical-sizing: auto;
   }
@@ -769,7 +902,9 @@ const externalLinks = [
 
   #press::before {
     content: "";
+
     position: fixed;
+
     z-index: 3;
 
     width: 650px;
@@ -779,9 +914,11 @@ const externalLinks = [
     top: 60px;
 
     background: #ffd800;
+
     opacity: 0.04;
 
     filter: blur(120px);
+
     border-radius: 9999px;
 
     pointer-events: none;
@@ -789,7 +926,9 @@ const externalLinks = [
 
   #press::after {
     content: "";
+
     position: fixed;
+
     z-index: 3;
 
     width: 450px;
@@ -799,9 +938,11 @@ const externalLinks = [
     bottom: 100px;
 
     background: #ffd800;
+
     opacity: 0.025;
 
     filter: blur(120px);
+
     border-radius: 9999px;
 
     pointer-events: none;
@@ -814,30 +955,51 @@ const externalLinks = [
 
   .press-image {
     background: #111111;
-    filter: grayscale(85%) contrast(1.03);
+
+    filter:
+      grayscale(85%)
+      contrast(1.03);
   }
 
   .press-label {
     font-size: 0.75rem;
+
     text-transform: lowercase;
+
     letter-spacing: 0.15em;
-    color: rgba(255, 216, 0, 0.5);
+
+    color:
+      rgba(
+        255,
+        216,
+        0,
+        0.5
+      );
   }
 
   .download-link {
     display: flex;
-    min-height: 9rem;
-    align-items: flex-end;
-    justify-content: space-between;
 
-    border-right: 1px solid #665700;
-    border-bottom: 1px solid #665700;
+    min-height: 9rem;
+
+    align-items: flex-end;
+
+    justify-content:
+      space-between;
+
+    border-right:
+      1px solid #665700;
+
+    border-bottom:
+      1px solid #665700;
 
     padding: 1.5rem;
 
     transition:
-      background-color 180ms ease,
-      color 180ms ease;
+      background-color
+      180ms ease,
+      color
+      180ms ease;
   }
 
   .download-link:hover {
@@ -847,31 +1009,55 @@ const externalLinks = [
 
   .download-number {
     display: block;
-    margin-bottom: 0.75rem;
-    font-size: 0.75rem;
+
+    margin-bottom:
+      0.75rem;
+
+    font-size:
+      0.75rem;
   }
 
   .download-title {
     display: block;
-    font-size: 1.75rem;
-    letter-spacing: -0.035em;
+
+    font-size:
+      1.75rem;
+
+    letter-spacing:
+      -0.035em;
   }
 
   .download-type {
     display: block;
-    margin-bottom: 0.75rem;
-    font-size: 0.75rem;
-    text-transform: lowercase;
-    letter-spacing: 0.12em;
+
+    margin-bottom:
+      0.75rem;
+
+    font-size:
+      0.75rem;
+
+    text-transform:
+      lowercase;
+
+    letter-spacing:
+      0.12em;
   }
 
   .download-arrow {
     display: block;
-    font-size: 1.5rem;
+
+    font-size:
+      1.5rem;
   }
 
   ::selection {
     background: #ffd800;
     color: #000000;
+  }
+
+  @media (max-width: 640px) {
+    .download-title {
+      font-size: 1.4rem;
+    }
   }
 </style>
