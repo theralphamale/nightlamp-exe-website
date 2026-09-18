@@ -17,7 +17,7 @@ const pressPhotos = [
 
 <section
   id="press"
-  class="nightlamp-font relative min-h-screen overflow-hidden bg-[#050505] text-[#ffd800]"
+  class="nightlamp-font relative min-h-screen overflow-hidden bg-[#050505] text-[#f2eee3]"
 >
   <!-- ANIMATED BINARY BACKGROUND -->
   <canvas
@@ -42,25 +42,25 @@ const pressPhotos = [
   >
     <!-- LEFT -->
     <span
-      class="text-center text-[10px] lowercase tracking-[0.16em] text-[#ffd800] md:text-left md:text-xs md:tracking-[0.2em]"
+      class="text-center text-[10px] lowercase tracking-[0.16em] text-[#aaa69b] md:text-left md:text-xs md:tracking-[0.2em]"
     >
       nightlampexecute.com
     </span>
 
     <!-- CENTRE NAV -->
     <nav
-      class="flex items-center justify-center gap-3 whitespace-nowrap text-xs lowercase tracking-[0.16em] text-[#ffd800] md:tracking-[0.2em]"
+      class="flex items-center justify-center gap-3 whitespace-nowrap text-xs lowercase tracking-[0.16em] text-[#f2eee3] md:tracking-[0.2em]"
       aria-label="Main navigation"
     >
       <a
         href="/"
-        class="underline-offset-4 transition-opacity hover:opacity-60 hover:underline"
+        class="transition-colors hover:text-[#ffd800]"
       >
         home
       </a>
 
       <span
-        class="text-[#ffd800]/45"
+        class="text-[#77736b]"
         aria-hidden="true"
       >
         /
@@ -68,7 +68,7 @@ const pressPhotos = [
 
       <a
         href="/press"
-        class="underline underline-offset-4"
+        class="text-[#ffd800] underline underline-offset-4"
         aria-current="page"
       >
         press
@@ -77,7 +77,7 @@ const pressPhotos = [
 
     <!-- RIGHT -->
     <span
-      class="text-center text-[10px] lowercase tracking-[0.16em] text-[#ffd800] md:text-right md:text-xs md:tracking-[0.2em]"
+      class="text-center text-[10px] lowercase tracking-[0.16em] text-[#aaa69b] md:text-right md:text-xs md:tracking-[0.2em]"
     >
       a product of Limerick City, Ireland
     </span>
@@ -88,13 +88,13 @@ const pressPhotos = [
     class="relative z-10 mx-auto flex min-h-[65vh] w-full max-w-7xl flex-col justify-center px-6 py-16 md:min-h-[70vh] md:px-10 md:py-20"
   >
     <span
-      class="mb-6 text-xs lowercase tracking-[0.16em] text-[#ffd800]/60 md:tracking-[0.2em]"
+      class="mb-6 text-xs lowercase tracking-[0.16em] text-[#aaa69b] md:tracking-[0.2em]"
     >
       Limerick City, Ireland
     </span>
 
     <h1
-      class="nightlamp-title nightlamp-press-title max-w-full text-[#ffd800]"
+      class="nightlamp-title nightlamp-press-title max-w-full text-[#f2eee3]"
     >
       press
     </h1>
@@ -103,7 +103,7 @@ const pressPhotos = [
       class="mt-10 max-w-4xl border-l border-[#ffd800] bg-[#050505]/30 pl-5 backdrop-blur-[2px] md:mt-12"
     >
       <p
-        class="text-lg font-normal leading-relaxed text-[#ffd800] sm:text-xl md:text-2xl"
+        class="text-lg font-normal leading-relaxed text-[#f2eee3] sm:text-xl md:text-2xl"
       >
         nightlamp.exe is the electronic project of Limerick musician and
         producer Kieran Ralph. Drawing from breakcore, jungle, drum & bass,
@@ -113,7 +113,7 @@ const pressPhotos = [
       </p>
 
       <p
-        class="mt-6 text-lg font-normal leading-relaxed text-[#ffd800] sm:mt-8 sm:text-xl md:text-2xl"
+        class="mt-6 text-lg font-normal leading-relaxed text-[#f2eee3] sm:mt-8 sm:text-xl md:text-2xl"
       >
         <em>scoria 24–26</em> brings together material developed between
         2024 and 2026 and forms the first substantial collection released
@@ -130,23 +130,23 @@ const pressPhotos = [
       class="mb-5 flex items-center gap-4"
     >
       <span
-        class="text-sm lowercase tracking-[0.16em] text-[#ffd800] md:tracking-[0.2em]"
+        class="text-sm lowercase tracking-[0.16em] text-[#f2eee3] md:tracking-[0.2em]"
       >
         press photographs
       </span>
 
       <div
-        class="h-px flex-1 bg-[#665700]"
+        class="h-px flex-1 bg-[#5f561f]"
       ></div>
     </div>
 
     <div
-      class="grid grid-cols-1 border-l border-t border-[#665700] bg-[#050505]/75 backdrop-blur-[3px] md:grid-cols-2"
+      class="grid grid-cols-1 border-l border-t border-[#5f561f] bg-[#050505]/75 backdrop-blur-[3px] md:grid-cols-2"
     >
       {
         pressPhotos.map((photo) => (
           <article
-            class="min-w-0 border-b border-r border-[#665700] p-4 sm:p-5 md:p-6"
+            class="min-w-0 border-b border-r border-[#5f561f] p-4 sm:p-5 md:p-6"
           >
             <a
               href={photo.image}
@@ -165,15 +165,17 @@ const pressPhotos = [
             <div
               class="mt-5 flex items-end justify-between gap-3"
             >
-              <div class="min-w-0">
+              <div
+                class="min-w-0"
+              >
                 <span
-                  class="block text-[10px] lowercase tracking-[0.12em] text-[#ffd800]/50 sm:text-xs sm:tracking-[0.15em]"
+                  class="block text-[10px] lowercase tracking-[0.12em] text-[#aaa69b] sm:text-xs sm:tracking-[0.15em]"
                 >
                   press photograph
                 </span>
 
                 <span
-                  class="mt-1 block text-lg sm:text-xl"
+                  class="mt-1 block text-lg text-[#f2eee3] sm:text-xl"
                 >
                   {photo.number}
                 </span>
@@ -182,7 +184,7 @@ const pressPhotos = [
               <a
                 href={photo.download}
                 download
-                class="shrink-0 border border-[#665700] px-3 py-2.5 text-[10px] lowercase tracking-[0.1em] text-[#ffd800] transition-colors hover:border-[#ffd800] hover:bg-[#ffd800] hover:text-black sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.15em]"
+                class="shrink-0 border border-[#5f561f] px-3 py-2.5 text-[10px] lowercase tracking-[0.1em] text-[#ffd800] transition-colors hover:border-[#ffd800] hover:bg-[#ffd800] hover:text-black sm:px-4 sm:py-3 sm:text-xs sm:tracking-[0.15em]"
               >
                 high-res ↓
               </a>
@@ -193,7 +195,7 @@ const pressPhotos = [
     </div>
 
     <p
-      class="mt-4 text-[10px] lowercase leading-relaxed tracking-[0.08em] text-[#ffd800]/40 sm:text-xs sm:tracking-[0.12em]"
+      class="mt-4 text-[10px] lowercase leading-relaxed tracking-[0.08em] text-[#77736b] sm:text-xs sm:tracking-[0.12em]"
     >
       photographs may be used for editorial / press coverage of nightlamp.exe
     </p>
@@ -201,7 +203,7 @@ const pressPhotos = [
 
   <!-- FOOTER -->
   <div
-    class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between border-t border-[#665700] px-6 py-5 text-[10px] lowercase tracking-[0.12em] text-[#ffd800] sm:text-xs sm:tracking-[0.15em] md:px-10"
+    class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between border-t border-[#5f561f] px-6 py-5 text-[10px] lowercase tracking-[0.12em] text-[#aaa69b] sm:text-xs sm:tracking-[0.15em] md:px-10"
   >
     <span>nightlamp.exe</span>
     <span>ireland</span>
@@ -214,12 +216,17 @@ const pressPhotos = [
     opacity: number;
   };
 
-  const canvas = document.querySelector(
-    "#press-binary-background"
-  );
+  const canvas =
+    document.querySelector(
+      "#press-binary-background"
+    );
 
-  if (canvas instanceof HTMLCanvasElement) {
-    const ctx = canvas.getContext("2d");
+  if (
+    canvas instanceof
+    HTMLCanvasElement
+  ) {
+    const ctx =
+      canvas.getContext("2d");
 
     if (ctx) {
       let width = 0;
@@ -227,112 +234,231 @@ const pressPhotos = [
       let columns = 0;
       let rows = 0;
       let lastUpdate = 0;
-      let resizeTimer: number | undefined;
+
+      let resizeTimer:
+        number | undefined;
 
       const fontSize = 15;
       const charWidth = 11;
       const charHeight = 20;
 
-      let characters: BinaryCharacter[] = [];
+      let characters:
+        BinaryCharacter[] = [];
 
-      const randomBinary = (): "0" | "1" => {
-        return Math.random() > 0.5 ? "1" : "0";
-      };
+      const randomBinary =
+        (): "0" | "1" => {
+          return Math.random() > 0.5
+            ? "1"
+            : "0";
+        };
 
-      const initialise = (): void => {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const initialise =
+        (): void => {
+          const dpr =
+            Math.min(
+              window.devicePixelRatio || 1,
+              2
+            );
 
-        width = window.innerWidth;
-        height = window.innerHeight;
+          width =
+            window.innerWidth;
 
-        canvas.width = Math.floor(width * dpr);
-        canvas.height = Math.floor(height * dpr);
+          height =
+            window.innerHeight;
 
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
+          canvas.width =
+            Math.floor(
+              width * dpr
+            );
 
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          canvas.height =
+            Math.floor(
+              height * dpr
+            );
 
-        columns = Math.ceil(width / charWidth);
-        rows = Math.ceil(height / charHeight);
+          canvas.style.width =
+            `${width}px`;
 
-        characters = Array.from(
-          { length: columns * rows },
-          (): BinaryCharacter => ({
-            value: randomBinary(),
-            opacity: 0.08 + Math.random() * 0.3,
-          })
-        );
+          canvas.style.height =
+            `${height}px`;
 
-        draw();
-      };
-
-      const draw = (): void => {
-        ctx.clearRect(0, 0, width, height);
-
-        ctx.font = `${fontSize}px monospace`;
-        ctx.textBaseline = "top";
-
-        characters.forEach(
-          (character: BinaryCharacter, index: number): void => {
-            const x = (index % columns) * charWidth;
-            const y = Math.floor(index / columns) * charHeight;
-
-            ctx.fillStyle = `rgba(255, 216, 0, ${character.opacity})`;
-            ctx.fillText(character.value, x, y);
-          }
-        );
-      };
-
-      const update = (): void => {
-        if (characters.length === 0) {
-          return;
-        }
-
-        const amountToChange = Math.max(
-          1,
-          Math.floor(characters.length * 0.035)
-        );
-
-        for (let i = 0; i < amountToChange; i++) {
-          const index = Math.floor(
-            Math.random() * characters.length
+          ctx.setTransform(
+            dpr,
+            0,
+            0,
+            dpr,
+            0,
+            0
           );
 
-          const character = characters[index];
+          columns =
+            Math.ceil(
+              width / charWidth
+            );
 
-          if (!character) {
-            continue;
+          rows =
+            Math.ceil(
+              height / charHeight
+            );
+
+          characters =
+            Array.from(
+              {
+                length:
+                  columns * rows,
+              },
+              (): BinaryCharacter => ({
+                value:
+                  randomBinary(),
+
+                opacity:
+                  0.08 +
+                  Math.random() *
+                    0.3,
+              })
+            );
+
+          draw();
+        };
+
+      const draw =
+        (): void => {
+          ctx.clearRect(
+            0,
+            0,
+            width,
+            height
+          );
+
+          ctx.font =
+            `${fontSize}px monospace`;
+
+          ctx.textBaseline =
+            "top";
+
+          characters.forEach(
+            (
+              character:
+                BinaryCharacter,
+              index: number
+            ): void => {
+              const x =
+                (index %
+                  columns) *
+                charWidth;
+
+              const y =
+                Math.floor(
+                  index /
+                    columns
+                ) *
+                charHeight;
+
+              ctx.fillStyle =
+                `rgba(255, 216, 0, ${character.opacity})`;
+
+              ctx.fillText(
+                character.value,
+                x,
+                y
+              );
+            }
+          );
+        };
+
+      const update =
+        (): void => {
+          if (
+            characters.length ===
+            0
+          ) {
+            return;
           }
 
-          character.value = randomBinary();
-          character.opacity =
-            0.08 + Math.random() * 0.38;
-        }
-      };
+          const amountToChange =
+            Math.max(
+              1,
 
-      const animate = (time: number): void => {
-        if (time - lastUpdate > 55) {
+              Math.floor(
+                characters.length *
+                  0.035
+              )
+            );
+
+          for (
+            let i = 0;
+            i <
+            amountToChange;
+            i++
+          ) {
+            const index =
+              Math.floor(
+                Math.random() *
+                  characters.length
+              );
+
+            const character =
+              characters[index];
+
+            if (!character) {
+              continue;
+            }
+
+            character.value =
+              randomBinary();
+
+            character.opacity =
+              0.08 +
+              Math.random() *
+                0.38;
+          }
+        };
+
+      const animate = (
+        time: number
+      ): void => {
+        if (
+          time -
+            lastUpdate >
+          55
+        ) {
           update();
           draw();
-          lastUpdate = time;
+
+          lastUpdate =
+            time;
         }
 
-        window.requestAnimationFrame(animate);
+        window.requestAnimationFrame(
+          animate
+        );
       };
 
-      const handleResize = (): void => {
-        if (resizeTimer !== undefined) {
-          window.clearTimeout(resizeTimer);
-        }
+      const handleResize =
+        (): void => {
+          if (
+            resizeTimer !==
+            undefined
+          ) {
+            window.clearTimeout(
+              resizeTimer
+            );
+          }
 
-        resizeTimer = window.setTimeout((): void => {
-          initialise();
-        }, 150);
-      };
+          resizeTimer =
+            window.setTimeout(
+              (): void => {
+                initialise();
+              },
+              150
+            );
+        };
 
       initialise();
-      window.requestAnimationFrame(animate);
+
+      window.requestAnimationFrame(
+        animate
+      );
 
       window.addEventListener(
         "resize",
@@ -348,8 +474,12 @@ const pressPhotos = [
   html,
   body {
     margin: 0;
-    background: #050505;
-    overflow-x: hidden;
+
+    background:
+      #050505;
+
+    overflow-x:
+      hidden;
   }
 
   .nightlamp-font {
@@ -368,108 +498,192 @@ const pressPhotos = [
       Didot,
       "Times New Roman",
       serif;
-    font-weight: 400;
-    font-optical-sizing: auto;
+
+    font-weight:
+      400;
+
+    font-optical-sizing:
+      auto;
   }
 
   .nightlamp-press-title {
-    font-size: clamp(4rem, 20vw, 9rem);
-    line-height: 0.9;
-    letter-spacing: -0.025em;
-    word-break: normal;
-    overflow-wrap: normal;
+    font-size:
+      clamp(
+        4rem,
+        20vw,
+        9rem
+      );
+
+    line-height:
+      0.9;
+
+    letter-spacing:
+      -0.025em;
+
+    word-break:
+      normal;
+
+    overflow-wrap:
+      normal;
   }
 
   @media (min-width: 640px) {
     .nightlamp-press-title {
-      font-size: clamp(6rem, 14vw, 9rem);
-      line-height: 0.82;
-      letter-spacing: -0.055em;
+      font-size:
+        clamp(
+          6rem,
+          14vw,
+          9rem
+        );
+
+      line-height:
+        0.82;
+
+      letter-spacing:
+        -0.055em;
     }
   }
 
   @media (min-width: 1024px) {
     .nightlamp-press-title {
-      font-size: 9rem;
-      line-height: 0.78;
-      letter-spacing: -0.07em;
+      font-size:
+        9rem;
+
+      line-height:
+        0.78;
+
+      letter-spacing:
+        -0.07em;
     }
   }
 
   .press-grid {
     background-image:
       linear-gradient(
-        rgba(255, 216, 0, 0.025) 1px,
-        transparent 1px
+        rgba(
+            255,
+            216,
+            0,
+            0.025
+          )
+          1px,
+        transparent
+          1px
       ),
       linear-gradient(
         90deg,
-        rgba(255, 216, 0, 0.025) 1px,
-        transparent 1px
+        rgba(
+            255,
+            216,
+            0,
+            0.025
+          )
+          1px,
+        transparent
+          1px
       );
 
-    background-size: 48px 48px;
+    background-size:
+      48px 48px;
 
-    mask-image: linear-gradient(
-      to bottom,
-      black,
-      transparent 95%
-    );
+    mask-image:
+      linear-gradient(
+        to bottom,
+        black,
+        transparent
+          95%
+      );
   }
 
   #press::before {
     content: "";
+
     position: fixed;
+
     z-index: 3;
 
-    width: 650px;
-    height: 650px;
+    width:
+      650px;
 
-    right: -300px;
-    top: 60px;
+    height:
+      650px;
 
-    background: #ffd800;
-    opacity: 0.04;
+    right:
+      -300px;
 
-    filter: blur(120px);
-    border-radius: 9999px;
+    top:
+      60px;
 
-    pointer-events: none;
+    background:
+      #ffd800;
+
+    opacity:
+      0.04;
+
+    filter:
+      blur(120px);
+
+    border-radius:
+      9999px;
+
+    pointer-events:
+      none;
   }
 
   #press::after {
     content: "";
+
     position: fixed;
+
     z-index: 3;
 
-    width: 450px;
-    height: 450px;
+    width:
+      450px;
 
-    left: -250px;
-    bottom: 100px;
+    height:
+      450px;
 
-    background: #ffd800;
-    opacity: 0.025;
+    left:
+      -250px;
 
-    filter: blur(120px);
-    border-radius: 9999px;
+    bottom:
+      100px;
 
-    pointer-events: none;
+    background:
+      #ffd800;
+
+    opacity:
+      0.02;
+
+    filter:
+      blur(120px);
+
+    border-radius:
+      9999px;
+
+    pointer-events:
+      none;
   }
 
   .press-image {
-    background: #111111;
+    background:
+      #111111;
+
     filter:
       grayscale(85%)
       contrast(1.03);
   }
 
   p {
-    overflow-wrap: break-word;
+    overflow-wrap:
+      break-word;
   }
 
   ::selection {
-    background: #ffd800;
-    color: #000000;
+    background:
+      #ffd800;
+
+    color:
+      #000000;
   }
 </style>
