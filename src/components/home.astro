@@ -25,20 +25,38 @@ const links = [
 
 <section
   id="home"
-  class="relative min-h-screen overflow-hidden bg-[#050505] text-[#ededed]"
+  class="relative min-h-screen overflow-hidden bg-[#050505] text-[#ffd800]"
 >
-  <!-- faint background grid -->
-  <div class="background-grid absolute inset-0 pointer-events-none"></div>
+  <!-- animated binary background -->
+  <canvas
+    id="binary-background"
+    class="pointer-events-none absolute inset-0 z-0 h-full w-full"
+    aria-hidden="true"
+  ></canvas>
 
-  <!-- top label -->
+  <!-- dark overlay so foreground remains readable -->
+  <div
+    class="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[#050505]/40 via-[#050505]/65 to-[#050505]"
+  ></div>
+
+  <!-- subtle grid -->
+  <div
+    class="background-grid pointer-events-none absolute inset-0 z-[2]"
+  ></div>
+
+  <!-- top -->
   <div
     class="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-between px-6 pt-6 md:px-10"
   >
-    <span class="font-mono text-xs uppercase tracking-[0.25em] text-[#8d8d8d]">
+    <span
+      class="font-mono text-xs uppercase tracking-[0.25em] text-[#ffd800]"
+    >
       independent electronic music
     </span>
 
-    <span class="hidden font-mono text-xs uppercase tracking-[0.25em] text-[#8d8d8d] sm:block">
+    <span
+      class="hidden font-mono text-xs uppercase tracking-[0.25em] text-[#ffd800] sm:block"
+    >
       nightlampexecute.com
     </span>
   </div>
@@ -48,20 +66,22 @@ const links = [
     class="relative z-10 mx-auto flex min-h-[72vh] w-full max-w-7xl flex-col justify-center px-6 py-20 md:px-10"
   >
     <p
-      class="mb-5 font-mono text-xs uppercase tracking-[0.35em] text-[#b7ff00]"
+      class="mb-5 font-mono text-xs uppercase tracking-[0.35em] text-[#ffd800]"
     >
       nightlamp.exe
     </p>
 
     <h1
-      class="max-w-6xl break-words text-[15vw] font-black leading-[0.78] tracking-[-0.075em] text-white sm:text-[12vw] lg:text-[9rem]"
+      class="max-w-6xl break-words text-[15vw] font-black leading-[0.78] tracking-[-0.075em] text-[#ffd800] sm:text-[12vw] lg:text-[9rem]"
     >
       NIGHTLAMP<br />
-      <span class="text-[#b7ff00]">.EXE</span>
+      <span class="text-[#ffd800]">.EXE</span>
     </h1>
 
-    <div class="mt-12 max-w-2xl border-l border-[#b7ff00] pl-5">
-      <p class="text-lg leading-relaxed text-[#bdbdbd] md:text-xl">
+    <div
+      class="mt-12 max-w-2xl border-l border-[#ffd800] bg-[#050505]/40 pl-5 backdrop-blur-[2px]"
+    >
+      <p class="text-lg leading-relaxed text-[#ffd800] md:text-xl">
         nightlamp.exe is an independent electronic project working across
         breakbeats, distortion, jungle, techno and experimental club music.
       </p>
@@ -73,38 +93,42 @@ const links = [
     class="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 md:px-10 md:pb-28"
   >
     <div class="mb-5 flex items-center gap-4">
-      <span class="font-mono text-xs uppercase tracking-[0.3em] text-[#8d8d8d]">
+      <span
+        class="font-mono text-xs uppercase tracking-[0.3em] text-[#ffd800]"
+      >
         listen / follow
       </span>
 
-      <div class="h-px flex-1 bg-[#252525]"></div>
+      <div class="h-px flex-1 bg-[#665700]"></div>
     </div>
 
-    <div class="grid grid-cols-1 border-l border-t border-[#292929] md:grid-cols-2">
+    <div
+      class="grid grid-cols-1 border-l border-t border-[#665700] bg-[#050505]/60 backdrop-blur-[3px] md:grid-cols-2"
+    >
       {
         links.map((link, index) => (
           <a
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="group flex min-h-32 items-end justify-between border-b border-r border-[#292929] p-6 transition-all duration-200 hover:bg-[#b7ff00] md:min-h-40"
+            class="group flex min-h-32 items-end justify-between border-b border-r border-[#665700] p-6 transition-all duration-200 hover:bg-[#ffd800] md:min-h-40"
           >
             <div>
-              <span class="mb-2 block font-mono text-xs text-[#666] group-hover:text-black">
+              <span class="mb-2 block font-mono text-xs text-[#ffd800] group-hover:text-black">
                 0{index + 1}
               </span>
 
-              <span class="text-2xl font-bold tracking-tight text-white group-hover:text-black md:text-3xl">
+              <span class="text-2xl font-bold tracking-tight text-[#ffd800] group-hover:text-black md:text-3xl">
                 {link.name}
               </span>
             </div>
 
             <div class="text-right">
-              <span class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#666] group-hover:text-black">
+              <span class="mb-3 block font-mono text-xs uppercase tracking-widest text-[#ffd800] group-hover:text-black">
                 {link.detail}
               </span>
 
-              <span class="text-xl text-[#b7ff00] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black">
+              <span class="text-xl text-[#ffd800] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-black">
                 ↗
               </span>
             </div>
@@ -116,38 +140,196 @@ const links = [
 
   <!-- bottom -->
   <div
-    class="relative z-10 mx-auto flex w-full max-w-7xl justify-between border-t border-[#202020] px-6 py-5 font-mono text-[10px] uppercase tracking-[0.2em] text-[#555] md:px-10"
+    class="relative z-10 mx-auto flex w-full max-w-7xl justify-between border-t border-[#665700] px-6 py-5 font-mono text-[10px] uppercase tracking-[0.2em] text-[#ffd800] md:px-10"
   >
     <span>nightlamp.exe</span>
     <span>ireland</span>
   </div>
 </section>
 
+<script>
+  const canvas = document.querySelector("#binary-background");
+
+  if (canvas instanceof HTMLCanvasElement) {
+    const ctx = canvas.getContext("2d");
+
+    if (ctx) {
+      let width = 0;
+      let height = 0;
+      let columns = 0;
+      let rows = 0;
+      let animationFrame = 0;
+      let lastUpdate = 0;
+
+      const fontSize = 15;
+      const charWidth = 11;
+      const charHeight = 20;
+
+      let characters = [];
+
+      const randomBinary = () => {
+        return Math.random() > 0.5 ? "1" : "0";
+      };
+
+      const initialise = () => {
+        const section = document.querySelector("#home");
+
+        if (!(section instanceof HTMLElement)) return;
+
+        const rect = section.getBoundingClientRect();
+        const dpr = window.devicePixelRatio || 1;
+
+        width = rect.width;
+        height = rect.height;
+
+        canvas.width = width * dpr;
+        canvas.height = height * dpr;
+
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+        columns = Math.ceil(width / charWidth);
+        rows = Math.ceil(height / charHeight);
+
+        characters = Array.from(
+          { length: columns * rows },
+          () => ({
+            value: randomBinary(),
+            opacity: 0.08 + Math.random() * 0.28,
+          })
+        );
+
+        draw();
+      };
+
+      const draw = () => {
+        ctx.clearRect(0, 0, width, height);
+
+        ctx.font = `${fontSize}px monospace`;
+        ctx.textBaseline = "top";
+
+        characters.forEach((character, index) => {
+          const x = (index % columns) * charWidth;
+          const y = Math.floor(index / columns) * charHeight;
+
+          ctx.fillStyle = `rgba(255, 216, 0, ${character.opacity})`;
+          ctx.fillText(character.value, x, y);
+        });
+      };
+
+      const update = () => {
+        if (characters.length === 0) return;
+
+        const amountToChange = Math.max(
+          1,
+          Math.floor(characters.length * 0.035)
+        );
+
+        for (let i = 0; i < amountToChange; i++) {
+          const index = Math.floor(Math.random() * characters.length);
+
+          characters[index].value = randomBinary();
+          characters[index].opacity =
+            0.08 + Math.random() * 0.35;
+        }
+      };
+
+      const animate = (time) => {
+        if (time - lastUpdate > 55) {
+          update();
+          draw();
+          lastUpdate = time;
+        }
+
+        animationFrame = requestAnimationFrame(animate);
+      };
+
+      let resizeTimer;
+
+      const handleResize = () => {
+        clearTimeout(resizeTimer);
+
+        resizeTimer = window.setTimeout(() => {
+          initialise();
+        }, 150);
+      };
+
+      initialise();
+
+      animationFrame = requestAnimationFrame(animate);
+
+      window.addEventListener("resize", handleResize);
+
+      document.addEventListener("astro:before-swap", () => {
+        cancelAnimationFrame(animationFrame);
+        window.removeEventListener("resize", handleResize);
+      });
+    }
+  }
+</script>
+
 <style>
   .background-grid {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+      linear-gradient(
+        rgba(255, 216, 0, 0.025) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 216, 0, 0.025) 1px,
+        transparent 1px
+      );
+
     background-size: 48px 48px;
-    mask-image: linear-gradient(to bottom, black, transparent 90%);
+
+    mask-image: linear-gradient(
+      to bottom,
+      black,
+      transparent 95%
+    );
   }
 
   #home::before {
     content: "";
     position: absolute;
-    width: 550px;
-    height: 550px;
-    right: -250px;
-    top: 100px;
-    background: #b7ff00;
-    opacity: 0.035;
-    filter: blur(100px);
+    z-index: 3;
+    width: 650px;
+    height: 650px;
+    right: -300px;
+    top: 60px;
+    background: #ffd800;
+    opacity: 0.045;
+    filter: blur(120px);
+    border-radius: 9999px;
+    pointer-events: none;
+  }
+
+  #home::after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    width: 450px;
+    height: 450px;
+    left: -250px;
+    bottom: 100px;
+    background: #ffd800;
+    opacity: 0.025;
+    filter: blur(120px);
     border-radius: 9999px;
     pointer-events: none;
   }
 
   ::selection {
-    background: #b7ff00;
-    color: #000;
+    background: #ffd800;
+    color: #000000;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #binary-background {
+      opacity: 0.35;
+    }
   }
 </style>
